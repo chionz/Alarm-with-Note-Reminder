@@ -1,6 +1,6 @@
 import datetime
 import winsound
-
+import ctypes
 
 
 def set():
@@ -31,7 +31,7 @@ def ring(hour,minutes,purpose):
             winsound.Beep(1000, 1000)
             for i in range(0,3):
                 winsound.Beep(1000, 1000)
-                
+                ctypes.windll.user32.MessageBoxW(0, "purpose", "Alarm", 1)
             snooze = input("Snooze (y/n)")
             if snooze == "y":
                 if hour >= 12:
