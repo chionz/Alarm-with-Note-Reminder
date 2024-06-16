@@ -37,7 +37,7 @@ def ring(hour,minutes,purpose):
                 if hour >= 12:
                     print("Alarm Snoozed by 1min!", hour-12,":",minutes+1)
                 elif hour < 12:
-                    print("Alarm Snoozed by 1min!", hour,minutes+1)
+                    print("Alarm Snoozed by 1min!", hour,":",minutes+1)
                 ring(hour,minutes +1,purpose)
             elif snooze == "n":
                 yn = input("Do you want to set another alarm? (y/n)")
